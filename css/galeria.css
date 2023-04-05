@@ -1,0 +1,21 @@
+
+#galeria{
+    background-color: black;
+    margin-top: 45px;
+    color: white;
+    text-align: center;
+}
+#galeria .contenedor img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: solid 5px white;
+}
+#galeria .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#galeria .contenedor article{
+    margin: 30px;
+}

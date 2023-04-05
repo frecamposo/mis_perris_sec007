@@ -1,0 +1,29 @@
+/*heredar una hoja de estilo*/
+@import url(menu.css);
+@import url("https://fonts.googleapis.com/css?family=Rancho");
+@import url(banner.css);
+@import url(bienvenido.css);
+@import url(blog.css);
+@import url(galeria.css);
+@import url(formulario.css);
+/*definir los valores iniciales*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rancho',serif;
+}
+
+header{
+    width: 100%;
+    /*alto de la cinta de menu*/
+    height: 50px; 
+    background: rgb(56, 49, 49) ;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h1{
+    float: left;
+}

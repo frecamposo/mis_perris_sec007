@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <script src="js/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $("#boton").click(function () {
+          $.ajax({
+            url:'',
+            method:'POST',
+            data:$("#formulario").serialize(),
+            success:function(data){
+              alert(data);
+            }
+          })
+        })
+      })
+    </script>
+    <header>
+      <h1 class="icon-guidedog">Mis Perris</h1>
+      <input type="checkbox" name="" id="menu-bar" />
+      <label class="icon-guidedog" for="menu-bar"></label>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="formulario.html">Formulario</a>
+        <a href="quienes_somos.htm">Quienes Somos</a>
+      </nav>
+    </header>
+    <script src="js/script.js"></script>
+    <script>
+      function recuperar_api() {
+        fetch("https://mindicador.cl/api/dolar").then(function(response) {
+          //status 200 "OK"
+          if (response.status!=200) {
+            alert('no pudo conectar con api');
+            return;
+          }
+          response.json().then(function(data) {
+            console.log(data);
+            console.log('Dolar Actual:'+data.serie[0].valor);
+          });
+        });
+      }
+    </script>
+    <main>
+      <!-- seccion de banner-->
+      <section id="banner">
+        <img src="img/tengo-un-perro-sh.jpg" alt="" />
+        <div class="contenedor">
+          <h2>Mascotas Felices en Mis Perris</h2>
+          <p>¿Cual es la mejor mascota para usted?</p>
+          <a href="">Leer Mas...</a>
+        </div>
+      </section>
+      <!-- seccion bienvenida-->
+      <section id="bienvenido">
+        <h2>Formulario Inscripcion</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          molestias ipsa quod recusandae minima praesentium, totam quas
+          reprehenderit corrupti? Quas at aspernatur nam nulla aliquid quibusdam
+          nemo quis odit tempora.
+        </p>
+      </section>
+      <section id="formulario">
+        <h2>Creacion de Cuenta Usuario</h2>
+        <form id="formulario" action="" method="post" onsubmit="return validaciones()">
+        <div class="controles">
+            <input type="text" class="col-peque" required placeholder="ingrese rut (12345678-9) " name="txtRut" id="txtRut">
+            <input type="text" class="col-peque" required placeholder="ingrese nombre completo" name="" id="" title="ingreso datos que no corresponden">
+            <input type="date" class="col-peque" required name="" id="datFecha">
+            <input type="email" class="col-peque" required placeholder="ingrese email" name="" id="">
+            <input type="text" class="col-gra" required placeholder="ingrese nombre usuario" name="" id="">
+            <input type="password" minlength="5" maxlength="10" class="col-peque" required placeholder="ingrese pass" name="" id="txtPass1">
+            <input type="password" minlength="5" maxlength="10" class="col-peque" required placeholder="repetir pass" name="" id="txtPass2">
+
+            <input type="submit" class="col-gra" value="Ingresar">
+            <input type="reset" class="col-gra" value="Limpiar">
+            <input type="button" value="Ejemplo" id="boton" >
+        </div>
+        </form>
+      </section>
+
+    </main>
+    <footer>
+      <p>Mis Perris</p>
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

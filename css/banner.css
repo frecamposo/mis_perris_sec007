@@ -1,0 +1,25 @@
+
+#banner img{
+    width: 100%;
+}
+
+#banner .contenedor{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: white;    
+}
+
+#banner .contenedor a{
+    text-decoration: none;
+    color: antiquewhite;
+    display: block;
+    background-color: tomato;
+    padding: 10px;
+    width: 100px;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+#banner .contenedor h2{
+    font-size: 29px;
+}
